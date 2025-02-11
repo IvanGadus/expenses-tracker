@@ -3,7 +3,7 @@ import ExpensesForm from "@/components/ExpensesForm";
 import ExpensesList from "@/components/ExpensesList";
 import React from "react";
 import { chceckAutenticationAndMembership } from "@/lib/server-utils";
-import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 
 type SearchParamsType = Promise<{
 	[key: string]: string | string[] | undefined;
@@ -18,7 +18,7 @@ export default async function Page({
 		paymentValueFromUrl === "success" ? 5000 : 0
 	);
 	if (paymentValueFromUrl === "success") {
-		return revalidatePath("/app/dashboard");
+		return redirect("/app/dashboard");
 	}
 
 	const expenses = await prisma.expenses.findMany({
