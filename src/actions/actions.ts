@@ -23,7 +23,6 @@ export async function addExpense(formData: FormData) {
 
 export async function deleteExpense(id: number) {
 	await chceckAutenticationAndMembership();
-
 	await prisma.expenses.delete({
 		where: {
 			id: id,

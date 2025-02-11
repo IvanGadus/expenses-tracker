@@ -1,9 +1,8 @@
 import { prisma } from "@/lib/db";
 import Stripe from "stripe";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
-
 export async function POST(reqest: Request) {
+	const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 	const body = await reqest.text();
 
 	//premenna ktora obsahuje data zo stripe requestu
