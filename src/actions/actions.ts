@@ -30,9 +30,7 @@ export async function deleteExpense(id: number) {
 		},
 	});
 	console.timeEnd("Prisma Query Time");
-	console.time("revalidate Start");
 	revalidatePath("/app/dashboard");
-	console.timeEnd("Revalidate End");
 }
 
 export async function createCheckoutSession() {
