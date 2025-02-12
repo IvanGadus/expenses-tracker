@@ -2,7 +2,7 @@ import "server-only";
 
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { redirect } from "next/navigation";
-import { prisma } from "./db";
+import { prisma } from "@/lib/db";
 
 export async function chceckAutenticationAndMembership(waitTime = 0) {
 	// authentication check

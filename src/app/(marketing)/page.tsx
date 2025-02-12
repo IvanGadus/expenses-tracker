@@ -14,7 +14,6 @@ export default async function Home() {
 	let isPayinggMember = false;
 
 	const user = await getUser();
-
 	if (user) {
 		const memberShip = await prisma.membership.findFirst({
 			where: {

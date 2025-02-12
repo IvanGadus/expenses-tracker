@@ -2,8 +2,8 @@ import { prisma } from "@/lib/db";
 import ExpensesForm from "@/components/ExpensesForm";
 import ExpensesList from "@/components/ExpensesList";
 import React from "react";
-import { chceckAutenticationAndMembership } from "@/lib/server-utils";
 import { redirect } from "next/navigation";
+import { chceckAutenticationAndMembership } from "@/lib/server-utils";
 
 type SearchParamsType = Promise<{
 	[key: string]: string | string[] | undefined;
