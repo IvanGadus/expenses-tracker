@@ -22,13 +22,17 @@ export async function addExpense(formData: FormData) {
 }
 
 export async function deleteExpense(id: number) {
+	console.time("Prisma Query Time");
 	await chceckAutenticationAndMembership();
 	await prisma.expenses.delete({
 		where: {
 			id: id,
 		},
 	});
+	console.timeEnd("Prisma Query Time");
+	console.time("revalidate Start");
 	revalidatePath("/app/dashboard");
+	console.timeEnd("Revalidate End");
 }
 
 export async function createCheckoutSession() {
