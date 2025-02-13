@@ -28,7 +28,7 @@ export default async function Home() {
 	}
 
 	return (
-		<div className="bg-[#5dc9a8] min-h-screen flex flex-col xl:flex-row items-center justify-center gap-10">
+		<div className="bg-[#5dc9a8] min-h-screen flex flex-col xl:flex-row items-center justify-center gap-10 p-5">
 			<Image
 				src="https://bytegrad.com/course-assets/youtube/expensestracker/preview.png"
 				alt="expenses tracker"
