@@ -62,14 +62,14 @@ export default async function Home() {
 							Go to dashboard
 						</Link>
 					) : (
-						<>
+						<div className="flex flex-col">
 							<p className="mb-2 max-w-[600px]">
 								To complete the payment, use the card number{" "}
 								<span className="font-bold">4242 4242 4242 4242</span>. The
 								other details can be fictitious.
 							</p>
 							<PurchaseBTN />
-						</>
+						</div>
 					)}
 				</div>
 			</div>
