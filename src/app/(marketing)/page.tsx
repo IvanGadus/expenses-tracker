@@ -41,7 +41,7 @@ export default async function Home() {
 					Track your <span className="font-extrabold">expenses</span> with ease
 				</h1>
 				<p className="text-2xl font-medium max-w-[600px]">
-					Use Expenses tracker to easily keep track of your ezpenses. Get
+					Use Expenses tracker to easily keep track of your expenses. Get
 					ligetime acces for 5$
 				</p>
 				<div className="mt-10 gap-3 flex">
