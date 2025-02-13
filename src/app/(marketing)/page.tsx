@@ -44,7 +44,7 @@ export default async function Home() {
 					Use Expenses tracker to easily keep track of your ezpenses. Get
 					ligetime acces for 5$
 				</p>
-				<div className="mt-10 gap-3">
+				<div className="mt-10 gap-3 flex">
 					{!isAuthenticatedUser ? (
 						<>
 							<LoginLink className="bg-black text-white py-2 px-4 rounded-lg font-medium">
